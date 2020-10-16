@@ -1,0 +1,143 @@
+{
+  "domain": "question",
+  "intents": [
+    {
+      "name": "command.share",
+      "description": "",
+      "implicit_slots": [],
+      "slots": [
+        {
+          "name": "service",
+          "capture_name": "service",
+          "description": "",
+          "type": "text",
+          "facets": "{}"
+        },
+        {
+          "name": "service_verb",
+          "capture_name": "service",
+          "description": "",
+          "type": "selset",
+          "facets": "{\"selections\": [{\"name\": \"twitter\", \"aliases\": [\"tweet\"]}, {\"name\": \"pinterest\", \"aliases\": [\"pin\"]}, {\"name\": \"email\", \"aliases\": [\"email\", \"mail\"]}]}"
+        }
+      ]
+    },
+    {
+      "name": "command.reset",
+      "description": "",
+      "implicit_slots": [],
+      "slots": []
+    },
+    {
+      "name": "command.cancel",
+      "description": "",
+      "implicit_slots": [],
+      "slots": []
+    },
+    {
+      "name": "navigate.next",
+      "description": "the user wishes to move to the next screen or step in the current process",
+      "implicit_slots": [],
+      "slots": []
+    },
+    {
+      "name": "accept",
+      "description": "an affirmative answer, usually to a question posed by the system.",
+      "implicit_slots": [],
+      "slots": []
+    },
+    {
+      "name": "command.exit",
+      "description": "the user wishes to close the app or cancel the current operation",
+      "implicit_slots": [],
+      "slots": []
+    },
+    {
+      "name": "fallback",
+      "description": "",
+      "implicit_slots": [],
+      "slots": []
+    },
+    {
+      "name": "command.undo",
+      "description": "the user wishes to undo the last operation",
+      "implicit_slots": [],
+      "slots": []
+    },
+    {
+      "name": "request.select",
+      "description": "the user is choosing a specificy item from a list of search results or any list displayed on-screen",
+      "implicit_slots": [],
+      "slots": [
+        {
+          "name": "number",
+          "capture_name": "number",
+          "description": "the index of the item being selected. note that natural language is typically 1-indexed.",
+          "type": "integer",
+          "facets": "{\"range\": [1, 50]}"
+        }
+      ]
+    },
+    {
+      "name": "command.stop",
+      "description": "",
+      "implicit_slots": [],
+      "slots": []
+    },
+    {
+      "name": "navigate.back",
+      "description": "the user wishes to move back to the previous screen or step in the current process",
+      "implicit_slots": [],
+      "slots": []
+    },
+    {
+      "name": "request.help",
+      "description": "the user needs help with the content currently displayed or the app in general",
+      "implicit_slots": [],
+      "slots": []
+    },
+    {
+      "name": "greet",
+      "description": "a casual greeting from the user to open the interaction or ensure that the app is listening",
+      "implicit_slots": [],
+      "slots": []
+    },
+    {
+      "name": "command.repeat",
+      "description": "",
+      "implicit_slots": [],
+      "slots": []
+    },
+    {
+      "name": "reject",
+      "description": "a negative answer, usually to a question posed by the system.",
+      "implicit_slots": [],
+      "slots": []
+    },
+    {
+      "name": "ask.question",
+      "description": "",
+      "implicit_slots": [],
+      "slots": [
+        {
+          "name": "entity",
+          "capture_name": "entity",
+          "description": "",
+          "type": "entity",
+          "facets": "{}"
+        }
+      ]
+    }
+  ],
+  "tags": [
+    "o",
+    "b_entity",
+    "b_number",
+    "b_service",
+    "b_service_verb",
+    "i_entity",
+    "i_number",
+    "i_service",
+    "i_service_verb"
+  ]
+}
