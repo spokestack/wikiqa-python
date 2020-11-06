@@ -12,7 +12,7 @@ from spokestack.tts.manager import TextToSpeechManager  # type: ignore
 from spokestack.vad.webrtc import VoiceActivityDetector  # type: ignore
 from spokestack.wakeword.tflite import WakewordTrigger  # type: ignore
 
-from config import KEY_ID, KEY_SECRET
+from config import GOOGLE_CREDS, KEY_ID, KEY_SECRET
 from dialogue_manager import DialogueManager
 
 
@@ -22,7 +22,7 @@ def main():
         [
             VoiceActivityDetector(),
             WakewordTrigger(pre_emphasis=0.97, model_dir="tflite"),
-            GoogleSpeechRecognizer("../spokestack-python/examples/google_asr.json"),
+            GoogleSpeechRecognizer(GOOGLE_CREDS),
             ActivationTimeout(),
         ],
     )
